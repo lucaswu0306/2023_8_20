@@ -1,5 +1,6 @@
+#module 一定是.py檔
 import random
-def get_all_names()->list[str]:
+def __get_all_names()->list[str]:
   with open("names.txt",mode='r',encoding='utf-8') as file:
     names:list[str] = []
     for line in file:
@@ -7,14 +8,14 @@ def get_all_names()->list[str]:
       names.append(line)
     return names
 
-def get_random_names(nums:int)->list[str]:
-  names = get_all_names()
+def __get_random_names(nums:int)->list[str]:
+  names = __get_all_names()
   random_list = random.choices(names,k=nums)
   return random_list
 
 def get_student(student_num:int)->list[list]:
   students:list[str] = []#建立第一維list
-  names = get_random_names(nums=student_num)
+  names = __get_random_names(nums=student_num)
   for i in range(student_num):
     one_student = [random.randint(50, 100) for _ in range(5)]#建立第2維list
     name = names[i]
