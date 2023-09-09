@@ -18,7 +18,7 @@ def get_student(student_num:int)->list[list]:
   
   names = __get_random_names(nums=student_num)
   for i in range(student_num):
-    one_student = [random.randint(50, 100) for _ in range(5)]#建立第2維list
+    one_student:list[int] = [random.randint(50, 100) for _ in range(5)]#建立第2維list
     name = names[i]
     one_student = [name] + one_student
     students.append(one_student)
