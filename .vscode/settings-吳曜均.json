@@ -1,0 +1,8 @@
+{
+    "wolf.disableHotModeWarning": true,
+    "explorer.openEditors.visible": 9,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none"
+}
